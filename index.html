@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>TRUYỀN THỐNG KHO K23</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* VIDEO NỀN */
+#bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* LÀM DỊU VIDEO */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    background: linear-gradient(rgba(120,0,0,0.85), rgba(80,0,0,0.85));
+    color: white;
+    text-align: center;
+    padding: 60px 30px 10px;
+}
+
+/* DÒNG SÁNG KIẾN */
+.header-note {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #ffd966;
+    font-style: italic;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+/* KHẨU HIỆU */
+header h1 {
+    margin: 8px 0 2px;   /* giảm mạnh khoảng cách phía dưới */
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+header p {
+    margin-top: 6px;
+    font-size: 15px;
+    font-style: italic;
+    color: #ffd966;
+    letter-spacing: 0.5px;
+}
+
+/* KHỐI NỘI DUNG */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* TIÊU ĐỀ MỤC */
+.section h2 {
+    margin: 0;
+    padding: 14px;
+    background: linear-gradient(to right, #b80000, #8b0000);
+    color: #ffd700;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* NỘI DUNG ẨN */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 20px;
+}
+
+.content.open {
+    padding: 20px;
+}
+
+/* ĐOẠN VĂN */
+.content p {
+    text-align: justify;
+    line-height: 1.7;
+    text-indent: 2em;
+    margin: 12px 0;
+}
+
+/* ẢNH + CAPTION */
+figure.img-block {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figure.img-block img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+figure.img-block figcaption {
+    margin-top: 6px;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="video_nen.mp4" type="video/mp4">
+</video>
+
+<header>
+    <div class="header-note">
+        ★ Sáng kiến CTĐ-CTCT năm 2026 của đồng chí Đại úy Ngô Quang Hòa, Trạm trưởng Trạm sửa chữa, Kho K23,
+        Cục Hậu cần-Kỹ thuật, Quân khu 1 – Chào mừng Đại hội đại biểu toàn quốc lần thứ XIV của Đảng ★
+    </div>
+    <h1>TRUYỀN THỐNG KHO K23</h1>
+    <p>Đoàn kết – Năng động – Sáng tạo – Tự lực – Tự cường</p>
+</header>
+
+<div class="container">
+
+<!-- PHẦN 1 -->
+<div class="section">
+<h2 onclick="toggle('p1')">LỊCH SỬ HÌNH THÀNH</h2>
+<div class="content" id="p1">
+
+<figure class="img-block">
+<img src="lich_su.jpg">
+<figcaption>Trung tâm chỉ huy Kho K23</figcaption>
+</figure>
+
+<p>
+Kho K23 (tiền thân là Trung đoàn xe tăng 407 và Kho K22 B) được thành lập ngày 08/11/1990,
+đóng quân trên địa bàn xã Ngọc Sơn, huyện Hiệp Hòa, tỉnh Bắc Giang cũ
+(nay thuộc xã Hoàng Vân, tỉnh Bắc Ninh), có tổng diện tích trên 33ha.
+</p>
+
+</div>
+</div>
+
+<!-- PHẦN 2 -->
+<div class="section">
+<h2 onclick="toggle('p2')">TỔ CHỨC BIÊN CHẾ</h2>
+<div class="content" id="p2">
+
+<figure class="img-block">
+<img src="to_chuc.jpg">
+<figcaption>Sơ đồ tổ chức, biên chế Kho K23</figcaption>
+</figure>
+
+<p>
+Hiện nay Kho K23 là đơn vị tương đương cấp Trung đoàn trực thuộc Cục HC-KT/QK1,
+được biên chế gồm: Ban CN; 3 cơ quan (Ban TM-KT, Ban Chính trị, Ban HC);
+2 Phân kho (PK Vũ khí, PK Xe máy); Trạm Bảo dưỡng sửa chữa và Trung đội Cảnh vệ bảo vệ.
+Quân số đơn vị gần 200 cán bộ, nhân viên.
+</p>
+
+</div>
+</div>
+
+<!-- PHẦN 3 -->
+<div class="section">
+<h2 onclick="toggle('p3')">NHIỆM VỤ CHÍNH TRỊ TRUNG TÂM</h2>
+<div class="content" id="p3">
+
+<figure class="img-block">
+<img src="nhiem_vu1.jpg">
+<figcaption>Công tác bảo quản, bảo dưỡng VKTBKT</figcaption>
+</figure>
+
+<p>
+Trải qua hơn 35 năm xây dựng và trưởng thành, CBNV Kho K23 luôn đoàn kết quyết tâm cao, 
+vượt qua mọi khó khăn thử thách, phấn đấu vươn lên hoàn thành xuất sắc mọi nhiệm vụ được giao, 
+bảo đảm kho trạm an toàn tuyệt đối. Hàng năm Kho đều hoàn thành đạt và vượt chỉ tiêu nhiệm vụ chính trị trung tâm, 
+đó là quản lý, bảo quản, bảo dưỡng, sửa chữa, niêm cất, tiếp nhận, cấp phát VKTBKT theo mệnh lệnh, 
+phục vụ các đơn vị trong LLVT/QK trong công tác SSCĐ, huấn luyện và các nhiệm vụ thường xuyên cũng như đột xuất khác.
+</p>
+
+<figure class="img-block">
+<img src="nhiem_vu2.jpg">
+<figcaption>Bảo quản, bảo dưỡng, sửa chữa phương tiện kỹ thuật</figcaption>
+</figure>
+
+<p>
+Tính đến nay, Kho đã tiến hành BQ, BD, SC, NC được hàng chục nghìn lượt xe ô tô, 
+hàng trăm nghìn khẩu súng pháo các loại, hàng nghìn tấn vật tư đồng bộ; 
+tiến hành thanh xử lý, dồn dịch, điều chuyển các loại xe ô tô, súng pháo bảo đảm an toàn tuyệt đối.
+</p>
+
+<figure class="img-block">
+<img src="nhiem_vu3.jpg">
+<figcaption>Phong trào phát huy sáng kiến, cải tiến kỹ thuật</figcaption>
+</figure>
+
+<p>
+Trong công tác Kỹ thuật, phong trào phát huy sáng kiến cải tiến KT của đơn vị đạt được nhiều thành tích nổi bật, 
+trong đó có 02 sáng kiến được cấp Bằng Tuổi trẻ sáng tạo cấp toàn quân và 03 sáng kiến được 
+Quân khu công nhận cùng nhiều sáng kiến có giá trị trên các mặt công tác được công nhận ở cấp Cục.
+</p>
+
+<figure class="img-block">
+<img src="nhiem_vu4.jpg">
+<figcaption>Kho K23 thăm hỏi tặng quà gia đình chính sách, gia đình có hoàn cảnh khó khăn nhân kỷ niệm ngày Thương binh liệt sĩ (27/7)</figcaption>
+</figure>
+
+
+
+<figure class="img-block">
+<img src="nhiem_vu5.jpg">
+<figcaption>Hoạt động dân vận, giúp nhân dân khắc phục thiên tai</figcaption>
+</figure>
+
+<p>
+Cùng với việc triển khai thực hiện thắng lợi nhiệm vụ chính trị,
+ đơn vị đã luôn thực hiện tốt công tác “Đền ơn đáp nghĩa”, 
+thăm hỏi tặng quà gia đình chính sách, gia đình có hoàn cảnh khó khăn nhân kỷ niệm ngày Thương binh liệt sĩ (27/7) 
+và dịp lễ tết hằng năm trị giá hàng chục triệu đồng; tham gia tích cực, có hiệu quả các cuộc vận động, 
+các phong trào thi đua yêu nước của các cấp, các ngành, địa phương phát động như: 
+“Kho K23 chung tay vì người nghèo - không để ai bị bỏ lại phía sau”; phong trào thi đua “Dân vận khéo”, 
+“Đơn vị dân vận tốt”; “Xóa nhà tạm, nhà dột nát năm 2025”; Phát huy tinh thần “Vì nhân dân phục vụ” cán bộ, 
+nhân viên Kho K23, đã nhanh chóng huy động 50 cán bộ, nhân viên phối hợp cùng lực lượng Công an, 
+dân quân địa phương cùng bà con nhân dân xã Hoàng Vân, tỉnh Bắc Ninh, khắc phục hậu quả mưa lũ do 
+ảnh hưởng của hoàn lưu bão số 11...., tô thắm hình ảnh cao đẹp “Bộ đội Cụ Hồ” trong lòng nhân dân được 
+cấp ủy chính quyền địa phương và nhân dân đánh giá cao. 
+
+</p>
+
+</div>
+</div>
+
+<!-- PHẦN 4 -->
+<div class="section">
+<h2 onclick="toggle('p4')">NHỮNG THÀNH TÍCH ĐÃ ĐẠT ĐƯỢC</h2>
+<div class="content" id="p4">
+
+<figure class="img-block">
+<img src="thanh_tich1.jpg">
+<figcaption>Đảng bộ Kho K23 hoàn thành xuất sắc nhiệm vụ năm 2025</figcaption>
+</figure>
+
+<p>
+Những kết quả trên đã đóng góp tích cực vào kết quả hoàn thành nhiệm vụ chung, 
+góp phần xây dựng Đảng bộ Kho hoàn thành xuất sắc nhiệm vụ, đơn vị VMTD “Mẫu mực tiêu biểu”. 
+Qua hơn 35 xây dựng và trưởng thành, các thế hệ CBCS Kho K23 đã xây đắp nên truyền thống 
+“Đoàn kết, năng động, sáng tạo, tự lực, tự cường”. Kho K23 luôn là một trong các đơn vị dẫn đầu 
+phong trào thi đua quyết thắng của Cục HC-KT.
+<p>
+
+<figure class="img-block">
+<img src="co.jpg">
+<figcaption>Kho K23 nhận cờ thi đua các cấp</figcaption>
+</figure>
+
+<p>
+Ghi nhận những kết quả và thành tích đạt được của Kho K23 trong hơn 35 qua, Đảng, Nhà nước, 
+Quân đội và Thủ trưởng BTL/QK đã tặng thưởng cho đơn vị nhiều phần thưởng cao quý, 
+hàng trăm lượt tập thể, hàng nghìn lượt cá nhân được khen thưởng vì có thành tích xuất sắc trong thực hiện nhiệm vụ. 
+Tính từ năm 2020 đến nay, Kho được Chủ tịch nước tặng thưởng Huân chương BVTQ hạng Ba (2020), 
+Bộ Quốc phòng tặng Cờ (2023, 2024), BTL/QK tặng Cờ (2022, 2025) cho đơn vị dẫn đầu phong trào thi đua Quyết thắng trong năm.
+<p>
+Đạt được những kết quả thành tích trên đây, trước hết đơn vị luôn nhận được sự quan tâm lãnh đạo, 
+chỉ đạo trực tiếp của Thường vụ Đảng ủy, Thủ trưởng Cục HC-KT và các phòng ban cơ quan Cục. 
+Đặc biệt là sự phối hợp giúp đỡ của các cơ quan, đơn vị bạn, của các cấp ủy Đảng, chính quyền, 
+nhà trường kết nghĩa và Nhân dân trên địa bàn đóng quân, xây dựng Đảng bộ hoàn thành xuất sắc nhiệm vụ, 
+đơn vị vững mạnh toàn diện “mẫu mực tiêu tiểu”, đáp ứng yêu cầu nhiệm vụ trong tình hình mới./.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<script>
+function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle("open");
+    el.style.maxHeight = el.classList.contains("open")
+        ? el.scrollHeight + "px"
+        : null;
+}
+</script>
+
+</body>
+</html>

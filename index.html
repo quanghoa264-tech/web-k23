@@ -31,38 +31,43 @@ body::before {
 
 /* HEADER */
 header {
-    position: relative;
     background: linear-gradient(rgba(120,0,0,0.85), rgba(80,0,0,0.85));
     color: white;
     text-align: center;
-    padding: 80px 30px 10px;
+    padding: 20px 16px 30px;
+}
+
+/* KHUNG GIỮ KHOẢNG CÁCH */
+.header-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;              /* 👈 khoảng cách tự động giữa các dòng */
 }
 
 /* DÒNG SÁNG KIẾN */
 .header-note {
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 18px;
+    font-size: clamp(18px, 2.8vw, 13px); /* 👈 tự co giãn theo màn hình */
     color: #ffd966;
     font-style: italic;
     text-align: center;
-    width: calc(100% - 40px);
+    max-width: 100%;
+    line-height: 1.4;
+}
+
+/* TIÊU ĐỀ CHÍNH */
+header h1 {
+    margin: 0;
+    font-size: clamp(60px, 6vw, 32px);   /* 👈 co giãn mượt */
+    letter-spacing: 1.5px;
 }
 
 /* KHẨU HIỆU */
-header h1 {
-    margin: 8px 0 2px;   /* giảm mạnh khoảng cách phía dưới */
-    font-size: 60px;
-    letter-spacing: 2px;
-}
 header p {
-    margin-top: 6px;
-    font-size: 28px;
+    margin: 0;
+    font-size: clamp(30px, 3.5vw, 16px);
     font-style: italic;
     color: #ffd966;
-    letter-spacing: 0.5px;
 }
 
 /* KHỐI NỘI DUNG */
@@ -195,14 +200,15 @@ document.addEventListener("click", function () {
 </video>
 
 <header>
-    <div class="header-note">
-        ★ Sáng kiến CTĐ - CTCT năm 2026 của đồng chí Đại úy Ngô Quang Hòa, Thiếu tá QNCN Nguyễn Thế Thăng, Kho K23,
-        Cục Hậu cần-Kỹ thuật, Quân khu 1
+	<div class="header-wrap">    
+	<div class="header-note">
+        ★ Sáng kiến CTĐ - CTCT năm 2026 của đồng chí Đại úy Ngô Quang Hòa, Thiếu tá QNCN Nguyễn Thế Thăng, Kho K23, Cục Hậu cần-Kỹ thuật, Quân khu 1
         <br>
 	Chào mừng thành công Đại hội Đảng toàn quốc lần thứ XIV, hướng tới Bầu cử ĐBQH khóa XVI, đại biểu HĐND các cấp nhiệm kỳ 2026-2031 ★
     </div>
     <h1>TRUYỀN THỐNG KHO K23</h1>
     <p>Đoàn kết – Năng động – Sáng tạo – Tự lực – Tự cường</p>
+	</div>
 </header>
 
 <div class="container">
